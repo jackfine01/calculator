@@ -73,15 +73,17 @@ const header = document.getElementById('headerArea');
 function dispNum(){
     if(calc.operator!=null){
     let num1 = Number(calc.numF).toFixed(5);
-    let num2 = Number(calc.numL).toFixed(5);
+    let num2 = Number(calc.numL);
     let opr = calc.operator;
     let str = num1+opr+num2;
     return str;
     };
-    
-    if(calc.operator===null){
+    if(calc.operator===null && calc.numF != "Infinity"){
         let num = Number(calc.numF).toFixed(5);
         return num;
+    };
+    if(calc.operator===null && calc.numF == "Infinity"){
+        return "Err";
     };
 }
 
