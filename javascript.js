@@ -65,10 +65,35 @@ function operateFull(){
     console.log(calc)
 };
 
+
+
+//Header Mechanics
+
+const header = document.getElementById('headerArea');
+function dispNum(){
+    if(calc.operator!=null){
+    let num1 = calc.numF;
+    let num2 = calc.numL;
+    let opr = calc.operator;
+    let str = num1+opr+num2;
+    return str;
+    }
+    if(calc.operator===null){
+        return calc.numF;
+    }
+
+}
+
+header.textContent = dispNum();
+
+
+
 //buttons for numbers
 
 const btnOne = document.getElementById('one');
-btnOne.addEventListener('click', () => {onClickNum('1')});
+btnOne.addEventListener('click', () => 
+    
+    {onClickNum('1')});
 
 const btnTwo = document.getElementById('two');
 btnTwo.addEventListener('click', () => {onClickNum('2')});
@@ -118,5 +143,6 @@ btnClr.addEventListener('click', () => {
     calc.numL = '';
 });
 
-const btnQual = document.getElementById('eqaul');
+const btnQual = document.getElementById('equal');
 btnQual.addEventListener('click', () => {operateFull()});
+
