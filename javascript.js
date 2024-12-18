@@ -42,6 +42,7 @@ function addNumF(str){
 };
 function addNumL(str){
     calc.numL += str;
+    console.log("adding " + str)
 };
 function operatorChange(str){
     calc.operator = str;
@@ -55,25 +56,55 @@ function onClickNum(str){
     };
 };
 
-//buttons
+//buttons for numbers
 
 const btnOne = document.getElementById('one');
 btnOne.addEventListener('click', () => {onClickNum('1')});
+
 const btnTwo = document.getElementById('two');
-btnOne.addEventListener('click', () => {onClickNum('2')});
+btnTwo.addEventListener('click', () => {onClickNum('2')});
+
 const btnThree = document.getElementById('three');
-btnOne.addEventListener('click', () => {onClickNum('3')});
+btnThree.addEventListener('click', () => {onClickNum('3')});
+
 const btnFour = document.getElementById('four');
-btnOne.addEventListener('click', () => {onClickNum('4')});
+btnFour.addEventListener('click', () => {onClickNum('4')});
+
 const btnFive = document.getElementById('five');
-btnOne.addEventListener('click', () => {onClickNum('5')});
+btnFive.addEventListener('click', () => {onClickNum('5')});
+
 const btnSix = document.getElementById('six');
-btnOne.addEventListener('click', () => {onClickNum('6')});
+btnSix.addEventListener('click', () => {onClickNum('6')});
+
 const btnSeven = document.getElementById('seven');
-btnOne.addEventListener('click', () => {onClickNum('7')});
+btnSeven.addEventListener('click', () => {onClickNum('7')});
+
 const btnEight = document.getElementById('eight');
-btnOne.addEventListener('click', () => {onClickNum('8')});
+btnEight.addEventListener('click', () => {onClickNum('8')});
+
 const btnNine = document.getElementById('nine');
-btnOne.addEventListener('click', () => {onClickNum('9')});
+btnNine.addEventListener('click', () => {onClickNum('9')});
+
 const btnZero = document.getElementById('zero');
-btnOne.addEventListener('click', () => {onClickNum('0')});
+btnZero.addEventListener('click', () => {onClickNum('0')});
+
+//buttons for operators
+
+const btnAdd = document.getElementById('add');
+btnAdd.addEventListener('click', () => {operatorChange('+')});
+
+const btnSub = document.getElementById('subtract');
+btnSub.addEventListener('click', () => {operatorChange('-')});
+
+const btnMul = document.getElementById('multiply');
+btnMul.addEventListener('click', () => {operatorChange('*')});
+
+const btnDiv = document.getElementById('divide');
+btnDiv.addEventListener('click', () => {operatorChange('/')});
+
+const btnClr = document.getElementById('clear');
+btnClr.addEventListener('click', () => {
+    operatorChange('null');
+    calc.numF = '';
+    calc.numL = '';
+});
