@@ -1,3 +1,11 @@
+const calc = {
+    numF: 0,
+    numL: 0,
+    operator: null
+}
+
+//functions for calculations
+
 function add(num1, num2){
     return num1+num2;
 }
@@ -27,5 +35,5 @@ function operate(num1, num2, opr){
         let num = divide(num1,num2);
         return num;
     };
+};
 
-}
