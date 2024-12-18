@@ -71,17 +71,17 @@ function operateFull(){
 
 const header = document.getElementById('headerArea');
 function dispNum(){
-
     if(calc.operator!=null){
-    let num1 = calc.numF;
-    let num2 = calc.numL;
+    let num1 = Number(calc.numF).toFixed(5);
+    let num2 = Number(calc.numL).toFixed(5);
     let opr = calc.operator;
     let str = num1+opr+num2;
     return str;
     };
+    
     if(calc.operator===null){
-        let str = calc.numF;
-        return str;
+        let num = Number(calc.numF).toFixed(5);
+        return num;
     };
 }
 
