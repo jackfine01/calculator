@@ -55,6 +55,15 @@ function onClickNum(str){
         addNumL(str);
     };
 };
+function operateFull(){
+    let num1 = Number (calc.numF);
+    let num2 = Number (calc.numL);
+
+    calc.numF = operate( num1, num2 , calc.operator );
+    calc.numL = "";
+    calc.operator = null;
+    console.log(calc)
+};
 
 //buttons for numbers
 
