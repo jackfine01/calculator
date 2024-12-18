@@ -38,6 +38,7 @@ function operate(num1, num2, opr){
 };
 function addNumF(str){
     calc.numF += str;
+    console.log("adding " + str)
 };
 function addNumL(str){
     calc.numL += str;
@@ -45,4 +46,34 @@ function addNumL(str){
 function operatorChange(str){
     calc.operator = str;
 };
+function onClickNum(str){
+    if(calc.operator === null){
+        addNumF(str);
+    };
+    if(calc.operator != null){
+        addNumL(str);
+    };
+};
 
+//buttons
+
+const btnOne = document.getElementById('one');
+btnOne.addEventListener('click', () => {onClickNum('1')});
+const btnTwo = document.getElementById('two');
+btnOne.addEventListener('click', () => {onClickNum('2')});
+const btnThree = document.getElementById('three');
+btnOne.addEventListener('click', () => {onClickNum('3')});
+const btnFour = document.getElementById('one');
+btnOne.addEventListener('click', () => {onClickNum('4')});
+const btnFive = document.getElementById('one');
+btnOne.addEventListener('click', () => {onClickNum('5')});
+const btnSix = document.getElementById('one');
+btnOne.addEventListener('click', () => {onClickNum('6')});
+const btnSeven = document.getElementById('one');
+btnOne.addEventListener('click', () => {onClickNum('7')});
+const btnEight = document.getElementById('one');
+btnOne.addEventListener('click', () => {onClickNum('8')});
+const btnNine = document.getElementById('nine');
+btnOne.addEventListener('click', () => {onClickNum('9')});
+const btnZero = document.getElementById('zero');
+btnOne.addEventListener('click', () => {onClickNum('0')});
