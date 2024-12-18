@@ -117,3 +117,6 @@ btnClr.addEventListener('click', () => {
     calc.numF = '';
     calc.numL = '';
 });
+
+const btnQual = document.getElementById('eqaul');
+btnQual.addEventListener('click', () => {operateFull()});
