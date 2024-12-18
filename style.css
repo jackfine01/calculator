@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 #one,
@@ -43,6 +44,9 @@ body{
     width: 250px;
     flex-direction: column;
     background-color: black;
+    margin: 500px;
+    border-radius: 2px;
+    border: 5px solid lightslategrey;
 }
 
 #headerArea{
@@ -51,7 +55,7 @@ body{
     height: 100px;
     width: 250px;
     flex-direction: column;
-    background-color: gray;
+    background-color: black;
 }
 
 #buttonArea{
