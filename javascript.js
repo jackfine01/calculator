@@ -1,6 +1,6 @@
 const calc = {
-    numF: 0,
-    numL: 0,
+    numF: '',
+    numL: '',
     operator: null
 }
 
@@ -8,16 +8,16 @@ const calc = {
 
 function add(num1, num2){
     return num1+num2;
-}
+};
 function subtract(num1, num2){
     return num1-num2;
-}
+};
 function multiply(num1, num2){
     return num1*num2;
-}
+};
 function divide(num1, num2){
     return num1/num2;
-}
+};
 function operate(num1, num2, opr){
     if(opr == '+'){
         let num = add(num1,num2);
@@ -35,5 +35,14 @@ function operate(num1, num2, opr){
         let num = divide(num1,num2);
         return num;
     };
+};
+function addNumF(str){
+    calc.numF += str;
+};
+function addNumL(str){
+    calc.numL += str;
+};
+function operatorChange(str){
+    calc.operator = str;
 };
 
